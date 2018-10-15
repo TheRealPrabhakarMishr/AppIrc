@@ -1,0 +1,63 @@
+
+<mat-sidenav-container class="example-container">
+
+<mat-sidenav #sidenav (keydown.escape)="sidenav.close(); changeIcon();" [mode]="'side'">
+
+<sidenav-list></sidenav-list>
+
+</mat-sidenav>
+
+
+
+<mat-sidenav-content>
+
+<div class="sidenav-content ">
+
+<div>
+
+<mat-toolbar color="primary">
+
+<mat-toolbar-row>
+
+<a class="link" mat-icon-button (click)="sidenav.toggle(); changeIcon();">
+
+<mat-icon>{{icon}}</mat-icon>
+
+</a>
+
+
+
+<span>{{appName}}</span>
+
+<span class="example-spacer"></span>
+
+<mat-icon class="example-icon"></mat-icon>
+
+</mat-toolbar-row>
+
+</mat-toolbar>
+
+</div>
+
+<div>
+
+<sidenav-content></sidenav-content>
+
+</div>
+
+<div class="footer">
+
+<footer></footer>
+
+</div>
+
+</div>
+
+
+
+</mat-sidenav-content>
+
+
+
+</mat-sidenav-container>
+
